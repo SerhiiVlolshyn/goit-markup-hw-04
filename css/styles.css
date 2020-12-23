@@ -32,6 +32,7 @@ img {
   --white-color: #ffffff;
 
   /* Задники */
+  --hero-bg-color: #c4c4c4;
   --important-background-color: #2f303a;
   --odd-section-background-color: #f5f4fa;
   --inactive-background-color: #f5f4fa;
@@ -166,6 +167,11 @@ footer {
   min-width: var(--site-width);
 }
 
+footer .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
 footer ul {
   margin-top: 9px;
 }
@@ -174,19 +180,57 @@ footer ul {
   margin-top: 9px;
 }
 
+.footer-contacts {
+  line-height: 1.71;
+}
+
 footer a {
   color: var(--footer-link-color);
   text-decoration: none;
 }
 
 .footer-container {
-  width: var(--site-width);
+  width: 231px;
   padding-left: 15px;
-  margin: 0 auto;
 }
 
 .footer-address {
   margin-top: 20px;
+  line-height: 1.71;
+}
+
+.footer-social {
+  margin: 15px auto auto 70px;
+}
+
+.footer-social-header {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+/* заставляем адрес выглядеть правильно */
+
+footer address {
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: var(--white-color);
+  font-style: normal;
+}
+
+.social-nets-logos {
+  display: flex;
+}
+
+.social-nets-logos div {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 /* Конец подвала */
@@ -207,15 +251,6 @@ footer a {
   text-transform: uppercase;
   color: var(--white-color);
   width: 696px;
-}
-
-/* заставляем адрес выглядеть правильно */
-
-footer address {
-  letter-spacing: 0.03em;
-  font-weight: 400;
-  color: var(--white-color);
-  font-style: normal;
 }
 
 /* управляем внешностью списков */
@@ -321,13 +356,16 @@ button.inactive {
 /* Элементы индекса */
 
 .banner {
-  background-color: var(--important-background-color);
+  background-color: var(--hero-bg-color);
 }
 
 .banner .container {
+  width: 696px;
+}
+
+.banner.main-index-element {
   padding: 200px 0;
   margin: 0 auto;
-  width: 696px;
 }
 
 .advantages {
