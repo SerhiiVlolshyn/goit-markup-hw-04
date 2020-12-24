@@ -118,6 +118,7 @@ nav {
 
 header .logo {
   padding: 24px 0 25px 0;
+  margin: auto 0;
 }
 
 .logotop {
@@ -145,6 +146,11 @@ header .logo {
   padding-bottom: 32px;
 }
 
+.studio-link {
+  margin: auto 0;
+  margin-left: 0;
+}
+
 .portfolio-link {
   margin: auto 0;
   margin-left: var(--margin-header);
@@ -155,12 +161,25 @@ header .logo {
   margin-left: var(--margin-header);
 }
 
-.header-tel {
-  margin-left: var(--margin-header);
+.header-mail {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.header-mail .header-link::before,
-.header-tel .header-link::before {
+.header-tel {
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header-contacts-icon {
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin: auto 10px;
+  margin-left: 0;
+
+  fill: var(--regular-text-color);
 }
 
 .contacts.header-element {
