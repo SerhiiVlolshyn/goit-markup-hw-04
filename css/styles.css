@@ -52,6 +52,10 @@ img {
 
   --pointer: #2196f3;
 
+  /* Значки */
+
+  --social-links-footer: var(--white-color);
+
   --common-font-size: 16px;
 
   --letter-spreding-for-headers: 0.06em;
@@ -155,6 +159,10 @@ header .logo {
   margin-left: var(--margin-header);
 }
 
+.header-mail .header-link::before,
+.header-tel .header-link::before {
+}
+
 .contacts.header-element {
   margin-left: auto;
   margin-right: 15px;
@@ -223,14 +231,37 @@ footer address {
   display: flex;
 }
 
-.social-nets-logos div {
+.social-nets-logos .social-icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
+  display: block;
   margin-top: 20px;
   margin-right: 10px;
+}
+
+.social-nets-logos .social-icon:last-child {
+  margin-right: 0;
+}
+
+/* соцсети футера */
+
+.footer-social .social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social .social-icon-item {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-links-footer);
+}
+
+.social-nets-logos .social-icon:nth-child(2) {
+  background-color: var(--pointer);
 }
 
 /* Конец подвала */
@@ -357,6 +388,9 @@ button.inactive {
 
 .banner {
   background-color: var(--hero-bg-color);
+  background-image: url(../images/background-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .banner .container {
