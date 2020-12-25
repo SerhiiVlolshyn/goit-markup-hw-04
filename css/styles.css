@@ -433,6 +433,17 @@ button.inactive {
   padding-bottom: var(--vertical-distance);
 }
 
+.advantages-cutebox {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+
+  display: inline-block;
+  background: center url(../images/symbol-defs.svg#icon-antenna) no-repeat
+    var(--inactive-background-color);
+  background-size: 70px;
+}
+
 .advantages p {
   margin-top: 10px;
   color: var(--regular-text-color);
