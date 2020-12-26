@@ -43,6 +43,8 @@ img {
   --logo-top: #000000;
   --logo-color: #2196f3;
 
+  --icon-inactive: #afb1b8;
+
   /* Текст */
   --main-text-color: #212121;
   --regular-text-color: #757575;
@@ -55,6 +57,7 @@ img {
   /* Значки */
 
   --social-links-footer: var(--white-color);
+  --social-links-pointer: var(--white-color);
 
   --common-font-size: 16px;
 
@@ -63,6 +66,7 @@ img {
   --standard-margin: 30px;
   --margin-header: 50px;
   --vertical-distance: 94px;
+  --common-margin-top: 50px;
   --site-width: 1200px;
 }
 
@@ -325,12 +329,6 @@ a:focus {
   color: var(--pointer);
 }
 
-/* задаём цвет фона для нечётных элементов */
-
-.main-index-element:last-child {
-  background-color: var(--odd-section-background-color);
-}
-
 /* кнопки */
 .button {
   color: var(--main-text-color);
@@ -437,11 +435,16 @@ button.inactive {
   width: 270px;
   height: 120px;
   border-radius: 4px;
+  background-color: var(--inactive-background-color);
 
-  display: inline-block;
-  background: center url(../images/symbol-defs.svg#icon-antenna) no-repeat
-    var(--inactive-background-color);
-  background-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-icon {
+  height: 70px;
+  width: 70px;
 }
 
 .advantages p {
@@ -457,6 +460,8 @@ button.inactive {
   line-height: var(--common-font-size);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-top: 30px;
 }
 
 .advantages-list-item {
@@ -471,12 +476,6 @@ button.inactive {
   padding-bottom: var(--vertical-distance);
 }
 
-.team .list,
-.abought-work .list {
-  display: flex;
-  justify-content: center;
-}
-
 .worklist-container {
   width: var(--site-width);
   padding: 0 15px;
@@ -486,13 +485,15 @@ button.inactive {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: -30px;
+  margin-top: var(--common-margin-top);
 }
 
 .work-list li {
   margin-left: var(--standard-margin);
-  flex-basis: calc(100% / 3 - var(--standard-margin));
+}
+
+.work-list img {
+  width: 370px;
 }
 
 .work-list li:first-child {
@@ -503,10 +504,16 @@ button.inactive {
   padding: var(--vertical-distance) 0 0 0;
   min-width: var(--site-width);
   padding-bottom: var(--vertical-distance);
+  background-color: var(--odd-section-background-color);
 }
 
 .team-list {
-  margin-top: 50px;
+  margin-top: var(--common-margin-top);
+}
+
+.team .list {
+  display: flex;
+  justify-content: center;
 }
 
 .team li {
@@ -523,7 +530,7 @@ button.inactive {
   width: var(--standard-width);
 }
 
-.team .container {
+.team .team-container {
   width: var(--standard-width);
   padding: 30px 0;
   display: flex;
@@ -554,6 +561,112 @@ button.inactive {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
+}
+
+.team-social-container {
+  padding: 16px 32px 0 32px;
+  display: flex;
+}
+
+.team-social-item + .team-social-item {
+  margin-left: auto;
+}
+
+.team-social-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--icon-inactive);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.team-social-item:hover,
+.team-social-item:focus {
+  background-color: var(--pointer);
+  color: var(--social-links-pointer);
+}
+
+/* Клиенты */
+
+.our-clients .section-title {
+  margin-top: var(--vertical-distance);
+}
+
+.client-list {
+  margin-top: var(--common-margin-top);
+  margin-bottom: var(--vertical-distance);
+
+  display: flex;
+}
+
+.client-list .clients-link {
+  display: block;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--icon-inactive);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list li + li {
+  margin-left: var(--standard-margin);
+}
+
+.client-one .client-icon {
+  width: 44.27px;
+  height: 90px;
+}
+
+.client-two .client-icon {
+  width: 40px;
+  height: 90px;
+}
+
+.client-three .client-icon {
+  width: 41px;
+  height: 90px;
+}
+
+.client-four .client-icon {
+  width: 79.66px;
+  height: 90px;
+}
+
+.client-five .client-icon {
+  width: 59px;
+  height: 90px;
+}
+
+.client-six .client-icon {
+  width: 88.48px;
+  height: 90px;
+}
+
+.client-list .client-icon {
+  fill: currentColor;
+}
+
+.client-list .clients-link:visited {
+  color: var(--icon-inactive);
+}
+
+.client-list .clients-link:hover,
+.client-list .clients-link:focus {
+  color: var(--pointer);
+  border-color: var(--pointer);
 }
 
 /* Элементы портфолио */
