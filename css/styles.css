@@ -202,7 +202,7 @@ footer {
 
 footer .container {
   display: flex;
-  justify-content: flex-start;
+  align-items: baseline;
 }
 
 footer ul {
@@ -233,7 +233,7 @@ footer a {
 }
 
 .footer-social {
-  margin: 15px auto auto 70px;
+  margin-left: 70px;
 }
 
 .footer-social-header {
@@ -285,7 +285,8 @@ footer address {
   fill: var(--social-links-footer);
 }
 
-.social-nets-logos .social-icon:nth-child(2) {
+.social-nets-logos .social-icon:hover,
+.social-nets-logos .social-icon:focus {
   background-color: var(--pointer);
 }
 
@@ -707,6 +708,7 @@ button.inactive {
 
 .portfolio-item-link {
   display: block;
+  width: 370px;
 }
 
 .portfolio-item:first-child {
